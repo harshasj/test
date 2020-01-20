@@ -16,7 +16,6 @@ pipeline {
 				echo 'Testing in progress .........'
 				sh 'sleep 30'
 			}
-       }
 	   }
 	   stage('Deploy') {
 			steps{
@@ -24,6 +23,6 @@ pipeline {
 				sh 'sleep 30'
 			}
        }
-	   
+	   }
      }
 }
