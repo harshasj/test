@@ -9,20 +9,21 @@ pipeline {
 				echo 'Building in progress .........'
 				sh 'sleep 30'
 			}
-       }
+       } 
 	   stage('Test ') {
+	   parallel{
 			steps{
-				parallel{
 				echo 'Testing in progress .........'
 				sh 'sleep 30'
-				}
 			}
-	   }
+			}
+       }
 	   stage('Deploy') {
 			steps{
 				echo 'Deployment  in progress .........'
 				sh 'sleep 30'
 			}
        }
+	   
      }
 }
