@@ -3,7 +3,7 @@ pipeline {
 		label 'project_java'
      }
   stages{
-       
+       parallel {
 	   stage('Build') {
 			steps{
 				echo 'Building in progress .........'
@@ -22,5 +22,6 @@ pipeline {
 				sh 'sleep 30'
 			}
        }
+	   }
      }
 }
